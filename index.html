@@ -1,1 +1,173 @@
-My Page
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TASI stock market Shiny App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="TASI stock market Shiny App">
+  <meta name="author" content="Saud Zabin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>TASI stock market Shiny App</h1>
+    <h2>Presentation</h2>
+    <p>Saud Zabin<br/>R-hacker</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What is TASI?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>it&#39;s the Saudi stock market index (Tadawul All Share Index)</p>
+
+<h3>The Data :</h3>
+
+<p>the data was downloded from google finance :
+<a href="http://www.google.com/finance/historical?q=TADAWUL%3ATASI&amp;ei=Gw3FVKn4GerGwAP1gIFg&amp;output=csv">http://www.google.com/finance/historical?q=TADAWUL%3ATASI&amp;ei=Gw3FVKn4GerGwAP1gIFg&amp;output=csv</a>
+in 19th of Januray 2015 .</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h3>Data Exploration</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>Loading the data:</h4>
+
+<pre><code class="r">data &lt;- read.csv(&quot;tasi.csv&quot;)
+dim(data)
+</code></pre>
+
+<pre><code>## [1] 247   6
+</code></pre>
+
+<h4>Let&#39;s see the head</h4>
+
+<pre><code class="r">head(data)
+</code></pre>
+
+<pre><code>##        Date    Open    High     Low   Close    Volume
+## 1 15-Jan-15 8551.93 8564.56 8449.15 8458.72 276394387
+## 2 14-Jan-15 8491.68 8569.54 8490.93 8551.93 297994213
+## 3 13-Jan-15 8436.71 8503.49 8268.50 8491.68 292832164
+## 4 12-Jan-15 8445.13 8498.40 8388.98 8436.71 337010527
+## 5 11-Jan-15 8284.89 8451.01 8277.20 8445.13 260558897
+## 6  8-Jan-15 8133.39 8335.34 8133.39 8284.89 316143073
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Now we want to make an app that shows the TASI performance during 2014 and calculate the most 
+important values in that year which are:</p>
+
+<p>1-The highest Volume </p>
+
+<p>2-The highest Point reached by TASI</p>
+
+<p>3-The Lowest Point reached by TASI</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>App links:</h2>
+  </hgroup>
+  <article data-timings="">
+    <h5>You can find the my App inthis link:</h5>
+
+<p><a href="https://qsaud.shinyapps.io/tasi6/">https://qsaud.shinyapps.io/tasi6/</a></p>
+
+<h4>The complete R script can be found here:</h4>
+
+<p><a href="https://github.com/Qsaud/DDP">https://github.com/Qsaud/DDP</a>  </p>
+
+<h4><strong><em>Thank You</em></strong></h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What is TASI?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Exploration'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The App'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='App links:'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
